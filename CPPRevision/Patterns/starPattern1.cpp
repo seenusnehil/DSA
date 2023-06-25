@@ -208,11 +208,42 @@ void pattern8(int n) {
         cout<<endl;
     }
 
+    cout<<endl;
+
 }
 
-void pattern9() {
+void pattern9(int n) {
     /*
-    
+        1
+       212
+      32123
+     4321234
+    543212345
+
+    print the above pattern
+    */
+
+    for(int i=1;i<=n;i++) {
+
+        int spaces = n-i+1;
+        for(int k=1;k<=spaces;k++) {
+            cout<<"  ";
+        }
+        for(int j=i;j>=1;j--) {
+            cout<<j<<" ";
+        }
+        for(int j=2;j<=i;j++) {
+            cout<<j<<" ";
+        }
+
+        cout<<endl;
+    }
+
+    cout<<endl;
+}
+
+void pattern10(int n) {
+    /*
         1
        212
       32123
@@ -227,7 +258,20 @@ void pattern9() {
     */
 
     for(int i=1;i<=(2*n-1);i++) {
-        
+
+        int totalColumns = i>n ? 2*n-i : i;
+        int spaces = i>n ? i-n+1 : n-i+1;
+        for(int k=1;k<=spaces;k++) {
+            cout<<"  ";
+        }
+        for(int j=totalColumns;j>=1;j--) {
+            cout<<j<<" ";
+        }
+        for(int j=2;j<=totalColumns;j++) {
+            cout<<j<<" ";
+        }
+
+        cout<<endl;
     }
 
 }
@@ -243,6 +287,8 @@ int main() {
     pattern6(5);
     pattern7(5);
     pattern8(5);
+    pattern9(5);
+    pattern10(5);
     
 
     
