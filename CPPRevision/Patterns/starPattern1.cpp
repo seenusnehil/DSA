@@ -1,10 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-
-int main() {
-
-    
+void pattern1(int n) {
     /*
     *
     * *
@@ -15,7 +12,7 @@ int main() {
     */
 
     // Outer loop for the number of rows
-    for(int row=1;row<=4;row++) {
+    for(int row=1;row<=n;row++) {
 
         // inner loop for the number of columns
         for(int col=1;col<=row;col++) {
@@ -27,7 +24,9 @@ int main() {
     }
 
     cout<<endl;
+}
 
+void pattern2(int n) {
     /*
 
     * * * * *
@@ -39,15 +38,17 @@ int main() {
     print the above pattern
     */
 
-    for(int i=1;i<=5;i++) {
-        for(int j=1;j<=5;j++) {
+    for(int i=1;i<=n;i++) {
+        for(int j=1;j<=n;j++) {
             cout<<"* ";
         }
         cout<<endl;
     }
 
     cout<<endl;
+}
 
+void pattern3(int n) {
     /*
 
     * * * * *
@@ -59,8 +60,8 @@ int main() {
     print the above pattern
     */
 
-    for(int i=1;i<=5;i++) {
-        for(int j=1;j<=(5-(i-1));j++) {
+    for(int i=1;i<=n;i++) {
+        for(int j=1;j<=(n-(i-1));j++) {
             cout<<"* ";
         }
         cout<<endl;
@@ -68,6 +69,31 @@ int main() {
 
     cout<<endl;
 
+}
+
+void pattern4(int n) {
+    /*
+
+    * * * * *
+    * * * * 
+    * * *
+    * *
+    * 
+
+    print the above pattern
+    */
+
+    for(int i=1;i<=n;i++) {
+        for(int j=1;j<=(n-(i-1));j++) {
+            cout<<"* ";
+        }
+        cout<<endl;
+    }
+
+    cout<<endl;
+}
+
+void pattern5(int n) {
     /*
 
     1
@@ -79,7 +105,7 @@ int main() {
     print the above pattern
     */
 
-    for(int i=1;i<=5;i++) {
+    for(int i=1;i<=n;i++) {
         for(int j=1;j<=i;j++) {
             cout<<j<<" ";
         }
@@ -88,7 +114,11 @@ int main() {
 
     cout<<endl;
 
+}
+
+void pattern6(int n) {
     /*
+
     *
     * *
     * * *
@@ -102,27 +132,18 @@ int main() {
     print the above pattern
     */
 
-    for(int i=1;i<=9;i++) {
+    for(int i=1;i<=(2*n-1);i++) {
+        int totalColumns = i > n ? 2*n - i : i;
 
-        // till the first half from top
-        if(i <= 5) {
-            for(int j=1;j<=i;j++) {
-                cout<<"* ";
-            }
-            cout<<endl;
+        for(int j=1;j<=totalColumns;j++) {
+            cout<<"* ";
         }
 
-        // the second half, printing in reverse order
-        else {
-            for(int j=1;j<=(9-i+1);j++) {
-                cout<<"* ";
-            }
-            cout<<endl;
-        }
+        cout<<endl;
     }
+}
 
-    cout<<endl;
-
+void pattern7(int n) {
     /*
 
          *
@@ -138,5 +159,92 @@ int main() {
     print the above pattern
     */
 
+    for(int i=1;i<=(2*n-1);i++) {
+
+        int totalColumns = i > n ? 2*n - i : i;
+        int spaces = n-totalColumns;
+
+        for(int j=1;j<=spaces;j++) {
+            cout<<" ";
+        }
+        for(int j=1;j<=totalColumns;j++) {
+            cout<<"* ";
+        }
+
+        cout<<endl;
+    }
+
+    cout<<endl;
+}
+
+void pattern8(int n) {
+    /*
+    
+    * * * * * 
+     * * * *
+      * * *
+       * *
+        *
+       * *
+      * * *
+     * * * *
+    * * * * *
+    
+    print the above pattern
+    */
+
+    for(int i=1;i<=(2*n-1);i++) {
+        int totalColumns = i > n ? i-n+1 : n-i+1;
+        int spaces = i > n ? 2*n-i-1 : i-1;
+
+        for(int j=1;j<=spaces;j++) {
+            cout<<" ";
+        }
+
+        for(int j=1;j<=totalColumns;j++) {
+            cout<<"* ";
+        }
+
+        cout<<endl;
+    }
+
+}
+
+void pattern9() {
+    /*
+    
+        1
+       212
+      32123
+     4321234
+    543212345
+     4321234
+      32123
+       212
+        1
+
+    print the above pattern
+    */
+
+    for(int i=1;i<=(2*n-1);i++) {
+        
+    }
+
+}
+
+int main() {
+
+    // Calling out all the functions
+    pattern1(5);
+    pattern2(5);
+    pattern3(5);
+    pattern4(5);
+    pattern5(5);
+    pattern6(5);
+    pattern7(5);
+    pattern8(5);
+    
+
+    
     return 0;
 }
