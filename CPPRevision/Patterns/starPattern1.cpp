@@ -276,6 +276,23 @@ void pattern10(int n) {
 
 }
 
+void pattern11() {
+
+    /*
+      **********
+      ****  ****
+      ***    ***
+      **      **
+      *        *
+      *        *
+      **      **
+      ***    ***
+      ****  ****
+      **********
+    
+    */
+}
+
 int main() {
 
     // Calling out all the functions
