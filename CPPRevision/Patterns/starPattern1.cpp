@@ -276,7 +276,7 @@ void pattern10(int n) {
 
 }
 
-void pattern11() {
+void pattern11(int n) {
 
     /*
       **********
@@ -291,6 +291,29 @@ void pattern11() {
       **********
     
     */
+
+    /// will try later
+    for(int i=1;i<=2*n;i++) {
+
+        int totalColumns = i>n ? 2*i-2*n : 2*n-2*i+2;
+        int spaces = i>n ? 2*i-2*totalColumns: 2*i-2; 
+
+        for(int j=1;j<=totalColumns;j++) {
+            cout<<"*";
+        }
+
+        for(int s=1;s<=spaces;s++) {
+            cout<<" ";
+        }
+
+        for(int j=1;j<=totalColumns;j++) {
+            cout<<"*";
+        }
+
+        cout<<endl;
+    }
+
+    cout<<endl;
 }
 
 int main() {
@@ -306,6 +329,7 @@ int main() {
     pattern8(5);
     pattern9(5);
     pattern10(5);
+    pattern11(5);
     
 
     
