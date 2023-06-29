@@ -88,4 +88,44 @@ int main() {
     }
 
     cout<<endl;
+
+
+    // Erase elements from the vector
+    vector<int> ve;
+    ve.emplace_back(12);
+    ve.emplace_back(24);
+    ve.emplace_back(36);
+    ve.emplace_back(48);
+    ve.emplace_back(60);
+
+    ve.erase(ve.begin());
+    cout<<ve[0]<<endl;
+
+    // When deleting more than 1 element, we write it in the form [start, end), 
+    // end is one location ahead of the element you want to delete, end is not included
+    ve.erase(ve.begin()+1, ve.begin()+2); // {24, 36, 48, 60} -> 36 and 48 will be deleted
+    for(auto it: ve) {
+        cout<<it<<" ";
+    }
+    
+    cout<<endl;
+
+    // Inserting element in a vector
+    ve.insert(ve.begin(), 4);  // inserting 4 at the beginning of the vector
+    ve.insert(ve.begin(), 4, 12);  // inserting 4 times 12 at the beginning of the vector
+    for(auto it: ve) {
+        cout<<it<<" ";
+    }
+
+    cout<<endl;
+
+    // copying a vector in another vector at certain position
+    vector<int> copy(2, 45);
+    ve.insert(ve.begin()+1, copy.begin(), copy.end()); // from copy begin to end, the vector completely copied into vector ve after 1st positon
+    for(auto it: ve) {
+        cout<<it<<" ";
+    }
+
+    // some other vector operations
+
 }
