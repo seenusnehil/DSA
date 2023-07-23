@@ -1,6 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// Selection Sort: Here, we simply selects the smallest array element, and swap it with the first element in the unsorted array
+
 // function to find the minimum element
 int min(int arr[], int n, int p) {
 
