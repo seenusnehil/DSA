@@ -3,14 +3,15 @@ using namespace std;
 
 // function to return whether this rotated/non-rotated array is sorted or not
 int removeDuplicateSorted(vector<int> &nums, int n) {
-    
-        for(int i=1;i<n;i++) {
-            if(nums[i] == nums[i-1]) nums[i] = 0;
+
+    for(int i=1;i<n;i++) {
+        if(nums[i] == nums[i-1]) {
+            nums.erase(nums.begin()+i);
+            n = nums.size();
         }
+    }
 
-        nums.erase(remove(nums.begin(), nums.end(), 0), nums.end());
-
-        return nums.size();    
+    return nums.size();
 }
 
 int main() {
