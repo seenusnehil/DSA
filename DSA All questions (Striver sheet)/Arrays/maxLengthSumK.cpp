@@ -29,7 +29,7 @@ int maxLengthSumK(int arr[], int n, int k) {
 // Time complexity: O(N) + O(N)
 int longestSubarrayWithSumK(int arr[], int n, int k) {
 
-    int sum=0, maxLen=0;
+    int sum=0, maxLen=0, count=0;
 
     // using a hashmap to store all the sums and the index of that sum
     // this will help us identify that at what point we had a particular sum
@@ -39,7 +39,8 @@ int longestSubarrayWithSumK(int arr[], int n, int k) {
 
         if(sum == k) {
             // if the sum == k, storing the length of it, only if it is greater than the maxLen
-            maxLen = max(maxLen, i+1);  
+            maxLen = max(maxLen, i+1); 
+            count++; 
         }
 
         // Here starts the brain-storming
@@ -56,11 +57,22 @@ int longestSubarrayWithSumK(int arr[], int n, int k) {
             // And calculating that length, just check is it the longest subarray or not, if,
             // store it in maxLen, else leave
             maxLen = max(maxLen, len);
+            
+            count++;
         }
 
-        // storing the sum and its corrspondinf index where we found that sum
-        prefixSum[sum] = i;
+        // storing the sum and its corrsponding index where we found that sum
+        // So, we put a condition here because if we had encountered teh sum before, 
+        // why would we update the index, if the sum is same, as we want the subartay with longest size
+        // This will handle the cases of 0 and -ve numbers, as in those cases, the sum might be repeated
+        // hence, it would be much more sensible to update the index, only if that sum never existed befrore
+        // else, simply keep the previous index of that sum
+        if(prefixSum.find(sum) == prefixSum.end()) {
+            prefixSum[sum] = i;
+        }
     }
+
+    cout<<count<<endl;
 
     return maxLen;
 }

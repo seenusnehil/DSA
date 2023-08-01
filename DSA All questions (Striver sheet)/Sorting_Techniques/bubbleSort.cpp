@@ -14,7 +14,7 @@ void bubbleSort(int arr[], int p, int n) {
         }
     }
 
-    // sotring the last value of i, so that we can reduce the array size in the next iteration
+    // sorting the last value of i, so that we can reduce the array size in the next iteration
     p = i;
     if(p == 0) {  // if the last index reaches to the first position, we'll end the iterations
         for(int i=0;i<n;i++) {
