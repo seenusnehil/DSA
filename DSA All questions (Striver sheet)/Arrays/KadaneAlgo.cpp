@@ -17,6 +17,7 @@ int kadaneAlgo1(int arr[], int n) {
 }
 
 // Optimal solution: Using Kadane's algorithm for finding the subarray with maximum sum
+// Approach
 int kadaneAlgo2(int arr[], int n) {
 
     int sum=0, maxSum=INT_MIN;
