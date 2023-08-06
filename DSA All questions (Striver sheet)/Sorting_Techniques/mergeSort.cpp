@@ -7,7 +7,7 @@ using namespace std;
 // function to merge the sorted arrays
 void merge(int arr[], int low, int mid, int high) {
 
-    // creating a temporry vector to hold the sorted array
+    // creating a temporary vector to hold the sorted array
     vector<int> temp;
 
     int left = low;
