@@ -42,5 +42,6 @@ int main() {
     cin>>num1>>num2;
 
     cout<<findGCD(num1, num2);
+    cout<<euclideanGCD(num1, num2);
     return 0;
 }

@@ -1,6 +1,13 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+/*
+The basic intuition while solving the patterns problems would be the following:
+    1. Identify the no. of vertical line, i.e. how mnay rows do you need
+    2. For each row, check how many columns do you need, and try to build a relation between the rows and columns
+    3. Finally after figuring out the relation, you simply need to check what do you need to print
+*/
+
 void pattern1(int n) {
     /*
     *
@@ -194,6 +201,8 @@ void pattern8(int n) {
     */
 
     for(int i=1;i<=(2*n-1);i++) {
+
+        // Using Ternary operator
         int totalColumns = i > n ? i-n+1 : n-i+1;
         int spaces = i > n ? 2*n-i-1 : i-1;
 
@@ -292,13 +301,12 @@ void pattern11(int n) {
     
     */
 
-    /// will try later
     for(int i=1;i<=2*n;i++) {
 
         int totalColumns = i>n ? 2*i-2*n : 2*n-2*i+2;
         int spaces = i>n ? 2*i-2*totalColumns: 2*i-2; 
 
-        for(int j=1;j<=totalColumns;j++) {
+        for(int j=1;j<=(totalColumns)/2;j++) {
             cout<<"*";
         }
 
@@ -306,7 +314,7 @@ void pattern11(int n) {
             cout<<" ";
         }
 
-        for(int j=1;j<=totalColumns;j++) {
+        for(int j=(totalColumns)/2+1;j<=totalColumns;j++) {
             cout<<"*";
         }
 

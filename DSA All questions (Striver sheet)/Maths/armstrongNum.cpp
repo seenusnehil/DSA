@@ -20,7 +20,7 @@ long armStrong(long num) {
         num /= 10;
     }
 
-    return arm;170
+    return arm;
 }
 
 int main() {

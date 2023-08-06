@@ -11,7 +11,7 @@ int min(int arr[], int n, int p) {
 
     for(int i=p;i<n;i++) {
         if(arr[i] <= num) {
-            num = arr[i]; // this one's storing the minimum element
+            num = arr[i]; // this one stores the minimum element
             idx = i; // this one stores the index of the smallest element
         }
     }
