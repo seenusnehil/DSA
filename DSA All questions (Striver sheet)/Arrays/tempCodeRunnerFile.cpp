@@ -1,8 +1,8 @@
-for (int i=0; i<m; i++) {
-        for (int j=0; j<n; j++) {
-            if(i%(m-1) == 0) {
-                temp[i][j] = arr[(i+2)%(m-1)][j];
-            }
-            else temp[i][j] = arr[i+2][j];
-        }
-    }
+for(int i=0;i<m;i++) {
+    //     int j=n-1;
+    //     cout<<arr[i][j]<<" ";
+    // }
+
+    // for(int j=m-1;j>=0;j--) {
+    //     cout<<
+    // }
