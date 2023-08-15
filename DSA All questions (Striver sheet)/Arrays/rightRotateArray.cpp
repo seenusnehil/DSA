@@ -20,11 +20,11 @@ using namespace std;
 
 void rightRotateArray2(int arr[], int n, int k) {
     
-    reverse(arr, arr+n);
+    reverse (arr, arr+n);
 
-    reverse(arr, arr+n-k-1);
+    reverse (arr, arr+n-k-1);
 
-    reverse(arr+k, arr+n);
+    reverse (arr+k, arr+n);
 
     for(int i=0;i<n;i++) {
         cout<<arr[i]<<" ";
