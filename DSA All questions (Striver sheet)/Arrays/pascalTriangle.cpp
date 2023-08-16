@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// Function to print each row of the pascal Triangle
 vector<int> generatePascalRow(int row) {
     long long ans = 1;
     vector<int> ansRow;
@@ -14,6 +15,7 @@ vector<int> generatePascalRow(int row) {
     return ansRow;
 }
 
+// Fucntion to generate the Pascal Triangle
 vector<vector<int>> printPascalTriangle(int n) {
     vector<vector<int>> ans;
     for(int i=1;i<=n;i++) {
