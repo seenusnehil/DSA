@@ -1,0 +1,10 @@
+List of problems based on subarray concept:
+
+1. Longest subarray wiih sum K
+2. TwoSum: Check if any pair with given sum K exists in the array or not(subsequence)
+3. Count the number of subarrays with the given sum K
+4. 3Sum: Check if any triplets with the given sum K exists in the array or not (subsequence)
+5. 4Sum: Check if any quads witht he given sum exists in the array or not (subsequence)
+6. Largest subarray with zero sum (K=0)
+7. Count of subarrays with the given XOR K
+
